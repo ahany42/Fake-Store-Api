@@ -4,18 +4,20 @@ for(let i =1;i<=5;i++){
     .then(json=>{
         let newDiv=document.createElement("div");
         newDiv.innerHTML=`
-        <div>
-        <div>
+        <div class=card>
+        <div class=imgContainer>
+        <img class=cardImg src=${json.image}>
+        </div>
+        <div class=cardHeader>
         <h5>${json.title}</h5>
         <h6>${json.category}</h6>
         <p>${json.description}</p>
         <div>
-        <h6>${json.price}</h6>
-        <h6>${json.rating}</h6>
-        </div>
-        <img src=${json.image}>
+        <h6>${json.price} LE</h6>
+        <h6>Rating:${json.rating.rate}</h6>
         </div>
         </div>
+      
      
         `;
         document.getElementById("container").appendChild(newDiv);
