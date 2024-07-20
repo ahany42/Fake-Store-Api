@@ -1,3 +1,4 @@
+//displaying first 5 products in API response
 for(let i =1;i<=5;i++){
     let data=fetch(`https://fakestoreapi.com/products/${i}`)
     .then(res=>res.json())
